@@ -4,10 +4,10 @@ using VoeAirlinesSenai.Entities;
 
 namespace VoeAirlinesSenai.Services;
 
-public class AeronaveServices{
+public class AeronaveService{
     private readonly VoeAirlinesSenaiContext _context;
 
-    public AeronaveServices(VoeAirlinesSenaiContext context){
+    public AeronaveService(VoeAirlinesSenaiContext context){
         _context = context;
     }
 

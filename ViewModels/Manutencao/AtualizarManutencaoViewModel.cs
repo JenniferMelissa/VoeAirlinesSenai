@@ -1,16 +1,17 @@
-namespace VoeAirlinesSenai.Entities;
-
 using VoeAirlinesSenai.Entities.Enums;
 
-public class Manutencao
-{
-    public Manutencao(DateTime dataHora, TipoManutencao tipoManutencao, int aeronaveId, string? observacoes =null)
+namespace VoeAirlinesSenai.ViewModels;
+
+public class AtualizarManutencaoViewModel{
+    public AtualizarManutencaoViewModel(int id, DateTime dataHora, string? observacoes, TipoManutencao tipoManutencao, int aeronaveId)
     {
+        Id = id;
         DataHora = dataHora;
         Observacoes = observacoes;
         TipoManutencao = tipoManutencao;
         AeronaveId = aeronaveId;
     }
+
     public int Id { get; set; }
 
     public DateTime DataHora { get; set; }
@@ -20,6 +21,8 @@ public class Manutencao
     public TipoManutencao TipoManutencao { get; set; }
 
     public int AeronaveId { get; set; }
+    
 
-    public Aeronave Aeronave { get; set; } =null!;
+
+
 }

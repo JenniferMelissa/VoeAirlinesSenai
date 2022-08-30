@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj": {}
+    "c:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj": {
+    "c:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj",
+        "projectUniqueName": "c:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj",
         "projectName": "VoeAirlinesSenai",
-        "projectPath": "C:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj",
+        "projectPath": "c:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj",
         "packagesPath": "C:\\Users\\Aluno1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\obj\\",
+        "outputPath": "c:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Aluno1\\AppData\\Roaming\\NuGet\\NuGet.Config",

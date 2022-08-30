@@ -17,7 +17,11 @@ builder.Services.AddSwaggerGen(c => {
 //injeção de dependencia da classe VoeAirlines
 builder.Services.AddDbContext<VoeAirlinesSenaiContext>();
 //injecao de dependencia da classe AeronaveService
-builder.Services.AddTransient<AeronaveServices>();
+builder.Services.AddTransient<AeronaveService>();
+builder.Services.AddTransient<CancelamentoService>();
+//builder.Services.AddTransient<PilotoService>();
+//builder.Services.AddTransient<VooService>();
+builder.Services.AddTransient<ManutencaoService>();
 
 var app = builder.Build();
 

@@ -8,9 +8,9 @@ using VoeAirlinesSenai.ViewModels;
 public class AeronaveController : ControllerBase
 {
 
-    private readonly AeronaveServices _aeronaveService;
+    private readonly AeronaveService _aeronaveService;
 
-    public AeronaveController(AeronaveServices aeronaveService)
+    public AeronaveController(AeronaveService aeronaveService)
     {
 
         _aeronaveService = aeronaveService;
@@ -42,9 +42,6 @@ public class AeronaveController : ControllerBase
         {
            return NotFound(); 
         }
-       
-            
-       
     }
 
     [HttpPut("{id}")]
@@ -68,9 +65,4 @@ public class AeronaveController : ControllerBase
         _aeronaveService.ExcluirAeronave(id);
         return NoContent();
     }
-
-
-
-
-
 }
