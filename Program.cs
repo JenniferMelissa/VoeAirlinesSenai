@@ -19,8 +19,8 @@ builder.Services.AddDbContext<VoeAirlinesSenaiContext>();
 //injecao de dependencia da classe AeronaveService
 builder.Services.AddTransient<AeronaveService>();
 builder.Services.AddTransient<CancelamentoService>();
-//builder.Services.AddTransient<PilotoService>();
-//builder.Services.AddTransient<VooService>();
+builder.Services.AddTransient<PilotoService>();
+builder.Services.AddTransient<VooService>();
 builder.Services.AddTransient<ManutencaoService>();
 
 var app = builder.Build();

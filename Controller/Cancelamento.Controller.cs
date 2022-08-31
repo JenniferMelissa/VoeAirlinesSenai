@@ -23,7 +23,7 @@ public class CancelamentoController : ControllerBase
         return Ok(cancelamento);
     }
 
-[HttpGet]
+    [HttpGet]
     public IActionResult ListarCancelamento()
     {
         return Ok(_cancelamentoService.ListarCancelamento());
@@ -55,9 +55,11 @@ public class CancelamentoController : ControllerBase
 
     }
 
+       [HttpDelete("{id}")]
 
-
-
-
-
+    public IActionResult ExcluirCancelamento(int id)
+    {
+        _cancelamentoService.ExcluirCancelamento(id);
+        return NoContent();
+    }
 }

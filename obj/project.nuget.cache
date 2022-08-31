@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gg3tviku1hsFlorC4pJfjcVT9cN2GtwHEMM4rd47DNSBwxfrCnzd+tYXRwwkuB3FPJewuAEs58TE0dFk6XhFPg==",
+  "dgSpecHash": "T3T8IZgELsM3lYfRZAgKiZR5te3RJBOSYkF2kGekD7tcIaxyJqmMiG8hJYGiKFAzBaEElcW9ZjNnIX9RfL+tOw==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj",
+  "projectFilePath": "C:\\Users\\Aluno1\\Desktop\\VoeAirlinesSenai\\VoeAirlinesSenai.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Aluno1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Aluno1\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
