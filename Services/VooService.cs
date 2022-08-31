@@ -1,6 +1,7 @@
 using VoeAirlinesSenai.Contexts;
 using VoeAirlinesSenai.ViewModels;
 using VoeAirlinesSenai.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace VoeAirlinesSenai.Services;
 
@@ -68,7 +69,15 @@ public class VooService {
         }
     }
 
+    public byte[]? GerarFichaVoo(int id)
+    {
+        var voo = _context.Voos.Include(v=>v.Aeronave)
+                                .Include(v=>v.Piloto)
+                                .Include(v=>v.Cancelamento)
+                                .FirstOrDefault(v=>v.Id == id);
 
+        if
+    }
 
 
 
