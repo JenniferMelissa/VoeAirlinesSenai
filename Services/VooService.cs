@@ -2,15 +2,20 @@ using VoeAirlinesSenai.Contexts;
 using VoeAirlinesSenai.ViewModels;
 using VoeAirlinesSenai.Entities;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using DinkToPdf.Contracts;
+using DinkToPdf;
 
 namespace VoeAirlinesSenai.Services;
 
 public class VooService {
     private readonly VoeAirlinesSenaiContext _context;
+    private readonly IConverter _converter;
 
-    public VooService(VoeAirlinesSenaiContext context)
+    public VooService(VoeAirlinesSenaiContext context, IConverter converter)
     {
         _context = context;
+        _converter = converter;
     }
 
     public DetalhesVooViewModel AdicionarVoo(AdicionarVooViewModel dados){
@@ -76,11 +81,50 @@ public class VooService {
                                 .Include(v=>v.Cancelamento)
                                 .FirstOrDefault(v=>v.Id == id);
 
-        if
+        if (voo != null)
+        {
+            var builder = new StringBuilder();
+
+            builder.Append($"<h1 style='text-align:center'>Ficha do Voo {voo.Id.ToString().PadLeft(10, '0')}</h1>")
+                    .Append($"<hr>")
+                    .Append($"<p><b>ORIGEM:</b> {voo.Origem} (saída em {voo.DataHoraPartida: dd/MM/yyyy} ás { voo.DataHoraPartida:hh:mm})</p>")
+                    .Append($"<p><b>DESTINO:</b> {voo.Destino} (chegada em {voo.DataHoraChegada:dd/MM/yyyy} ás {voo.DataHoraChegada:hh/mm})</p>")
+                    .Append($"<hr>")
+                    .Append($"<p><b>AERONAVE:</b> {voo.Aeronave!.Codigo} ({voo.Aeronave.Fabricante} {voo.Aeronave.Modelo})</p>")
+                    .Append($"<hr>")
+                    .Append($"<p><b>PILOTO:</b> {voo.Piloto!.Nome} ({voo.Piloto.Matricula})</p>")
+                    .Append($"<hr>");
+                    
+
+        if (voo.Cancelamento != null)
+        {
+            builder.Append($"<p style='color: red'><b> VOO CANCELADO: </b> {voo.Cancelamento.Motivo}</p>");
+        }
+
+        var doc = new HtmlToPdfDocument()
+        {
+            GlobalSettings = {
+            ColorMode = ColorMode.Color,
+            Orientation = Orientation.Portrait,
+            PaperSize = PaperKind.A4
+        },
+            Objects = 
+            {
+                new ObjectSettings()
+                {
+                    PagesCount = true,
+                    HtmlContent = builder.ToString(),
+                    WebSettings = {DefaultEncoding = "utf-8"}
+                }
+            }
+
+        };
+
+            return _converter.Convert(doc);
     }
+            return null;
 
 
 
-
-
+    }
 }

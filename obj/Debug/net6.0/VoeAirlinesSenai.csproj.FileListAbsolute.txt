@@ -179,3 +179,7 @@ C:\Users\Aluno1\desktop\VoeAirlinesSenai\obj\Debug\net6.0\refint\VoeAirlinesSena
 C:\Users\Aluno1\desktop\VoeAirlinesSenai\obj\Debug\net6.0\VoeAirlinesSenai.pdb
 C:\Users\Aluno1\desktop\VoeAirlinesSenai\obj\Debug\net6.0\VoeAirlinesSenai.genruntimeconfig.cache
 C:\Users\Aluno1\desktop\VoeAirlinesSenai\obj\Debug\net6.0\ref\VoeAirlinesSenai.dll
+C:\Users\Aluno1\Desktop\VoeAirlinesSenai\bin\Debug\net6.0\libwkhtmltox.dll
+C:\Users\Aluno1\Desktop\VoeAirlinesSenai\bin\Debug\net6.0\libwkhtmltox.dylib
+C:\Users\Aluno1\Desktop\VoeAirlinesSenai\bin\Debug\net6.0\libwkhtmltox.so
+C:\Users\Aluno1\Desktop\VoeAirlinesSenai\bin\Debug\net6.0\DinkToPdf.dll
